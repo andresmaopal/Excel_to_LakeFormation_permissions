@@ -1,10 +1,10 @@
 ![alt text](https://i.ibb.co/bF3Ts2F/excel-to-lf-logo.png)
 
- Lambda to Grant and Revoke bulk permissions to Lake Formation using an user-friendly Excel template
+ AWS Lambda to Grant and Revoke permissions in bulk to Lake Formation using an user-friendly Excel template
 
 ![alt text](https://i.ibb.co/xXgGv2Q/excel-to-lf-process.png")
 
-## Excel template example
+### Excel template example
 
 | ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions |
 | --- | --- | --- | --- | --- | --- |
@@ -14,6 +14,19 @@
 |tpcds	|SpectrumRole|	GRANT	|customer(-c_first_name,c_last_name,c_email_address)|	S	| |
 |s3://lf-data-lake-bucket|spectrumroletest, u:lf-developer	|GRANT	|	DLA	| |
 |tpcds	|spectrumroletest, u:lf-developer	|REVOKE|	*	|S,I,U,DR	|S,I,U,DR |
+
+### Supported syntax
+
+* ResourceLocationDatabase
+asadasd
+
+* TargetPrincipals
+* Action
+* ResourceElements
+* ResourcePermissions
+* ResourceGrantPermissions
+
+
 
 
 
