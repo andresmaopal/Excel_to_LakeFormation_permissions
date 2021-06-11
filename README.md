@@ -21,13 +21,13 @@
   * Any Glue Catalog Database name or S3 Data Location path to set permissions
   * **Example:** "database_name" or "s3://bucket/table"
 * **TargetPrincipals**
-  * Any IAM Principal, User, Role, Organization or Organization Unit to set permissions
-  * **Definitions:** 
-  * *RoleName* for set a role name
-  * *u:UserName* for set a user name
-  * *a:AccountID* for set an Account ID
-  * *o:111122223333:o-abcdefghijkl* for set an Organization
-  * *ou:111122223333:o-abcdefghijkl/ou-ab00-cdefghij* for set an Organization ID
+  * Any IAM Principal, User, Role, Organization or Organization Unit to set permissions, to specify more than use commas.
+
+  * **RoleName** for set a role name
+  * **u:UserName** for set a user name
+  * **a:AccountID** for set an Account ID
+  * **o:111122223333:o-abcdefghijkl** for set an Organization
+  * **ou:111122223333:o-abcdefghijkl/ou-ab00-cdefghij** for set an Organization ID
  
 * **Action**
 *   * Any Glue Catalog Database name or S3 Data Location path to set permissions
