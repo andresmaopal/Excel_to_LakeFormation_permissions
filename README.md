@@ -35,9 +35,8 @@
   
 * **ResourceElements**
 *   * A target Resource element to set permission, to specify more than one use comma separation.
-*   
   * **LEAVY EMPTY** to specify only a Database permission
-  * ** * ** to specify ALL TABLES within the database
+  * **"*"** to specify ALL TABLES within the database
   * **a:AccountID** for set an Account ID
   * **o:111122223333:o-abcdefghijkl** for set an Organization
   * **ou:111122223333:o-abcdefghijkl/ou-ab00-cdefghij** for set an Organization ID
