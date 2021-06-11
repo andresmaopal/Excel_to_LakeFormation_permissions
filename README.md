@@ -4,9 +4,7 @@
 
 ![alt text](https://i.ibb.co/xXgGv2Q/excel-to-lf-process.png")
 
-Excel template example
-
-
+## Excel template example
 
 | ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions |
 | --- | --- | --- | --- | --- | --- |
