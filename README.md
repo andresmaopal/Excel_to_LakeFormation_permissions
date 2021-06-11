@@ -21,7 +21,7 @@
   * Any Glue Catalog Database name or S3 Data Location path to set permissions
   * **Example:** "database_name" or "s3://bucket/table"
 * **TargetPrincipals**
-  * Any IAM Principal, User, Role, Organization or Organization Unit to set permissions, to specify more than use commas.
+  * Any IAM Principal, User, Role, Organization or Organization Unit to set permissions, to specify more than one use comma separation.
 
   * **roleName** for set a role name
   * **u:UserName** for set a user name
@@ -34,8 +34,14 @@
   * **Example:** "GRANT" or "REVOKE"
   
 * **ResourceElements**
-*   * Any Glue Catalog Database name or S3 Data Location path to set permissions
-  * **Example:** "database_name" or "s3://bucket/table"
+*   * A target Resource element to set permission, to specify more than one use comma separation.
+*   
+  * **LEAVY EMPTY** to specify only a Database permission
+  * ** * ** to specify ALL TABLES within the database
+  * **a:AccountID** for set an Account ID
+  * **o:111122223333:o-abcdefghijkl** for set an Organization
+  * **ou:111122223333:o-abcdefghijkl/ou-ab00-cdefghij** for set an Organization ID
+
 * **ResourcePermissions**
 *   * Any Glue Catalog Database name or S3 Data Location path to set permissions
   * **Example:** "database_name" or "s3://bucket/table"
