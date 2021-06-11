@@ -17,14 +17,13 @@
 
 ### Supported syntax
 
-* *ResourceLocationDatabase*
-* asadasd
+* **ResourceLocationDatabase** A Glue Catalog Database or S3 Data Location path
 
-* TargetPrincipals
-* Action
-* ResourceElements
-* ResourcePermissions
-* ResourceGrantPermissions
+* **TargetPrincipals**
+* **Action**
+* **ResourceElements**
+* **ResourcePermissions**
+* **ResourceGrantPermissions**
 
 
 
