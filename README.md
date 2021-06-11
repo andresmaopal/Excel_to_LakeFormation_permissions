@@ -6,7 +6,7 @@
 
 Excel template example
 
-| ResourceLocationDatabase| TargetPrincipals	| Action	 |ResourceElements	 | ResourcePermissions	| ResourceGrantPermissions
+| ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions
 | ------------- | ------------- || ------------- | ------------- || ------------- | ------------- |
 
 
