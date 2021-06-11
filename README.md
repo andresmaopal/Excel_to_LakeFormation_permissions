@@ -18,7 +18,8 @@
 ### Supported syntax
 
 * **ResourceLocationDatabase** 
-  * Item 2a
+  * Any Glue Catalog Database or S3 Data Location path
+  * Example: "database_name" , "s3://bucket/table"
 * **TargetPrincipals**
 * **Action**
 * **ResourceElements**
