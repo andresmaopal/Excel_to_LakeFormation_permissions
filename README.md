@@ -2,7 +2,7 @@
 
  Lambda to Grant and Revoke bulk permissions to Lake Formation using an user-friendly Excel temaplate
 
-![alt text](https://i.ibb.co/ZfjQhny/excel-to-lf-process.png)
+![alt text](https://i.ibb.co/xXgGv2Q/excel-to-lf-process.png")
 
 
 
