@@ -35,11 +35,12 @@
   
 * **ResourceElements**
 *   * A target Resource element to set permission, to specify more than one use comma separation.
-  * **LEAVY EMPTY** to specify only a Database permission
+  * **Leacy empty** to specify only a Database permission
   * **"*"** to specify ALL TABLES within the database
-  * **a:AccountID** for set an Account ID
-  * **o:111122223333:o-abcdefghijkl** for set an Organization
-  * **ou:111122223333:o-abcdefghijkl/ou-ab00-cdefghij** for set an Organization ID
+  * **TableName** to specify a Table with all columns
+  * **TableName(column1,column2,column3)** to include a Table with included list of columns
+  * **TableName(-column1,column2,column3)** to include a Table with excluded list of columns, the diference is the "-" symbol
+  * **TagKey:TagValue** to set a Tag with Key:Value
 
 * **ResourcePermissions**
 *   * Any Glue Catalog Database name or S3 Data Location path to set permissions
