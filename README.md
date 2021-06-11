@@ -20,8 +20,9 @@
 * **ResourceLocationDatabase** 
   * Any Glue Catalog Database name or S3 Data Location path to set permissions
   * **Example:** "database_name" or "s3://bucket/table"
+
 * **TargetPrincipals**
-  * Any IAM Principal: User, Role, Organization or Organization Unit to set permissions, to specify more than one use comma separation.
+  * Any IAM Principal: User, Role, Organization or Organization Unit to set permissions, to specify more than one use comma separation:
 
   * **roleName** for set a role name
   * **u:UserName** for set a user name
@@ -34,8 +35,10 @@
   * **Example:** "GRANT" or "REVOKE"
   
 * **ResourceElements**
-  * A target Resource element to set permission, to specify more than one use comma separation.
-  * **Leacy empty** to specify only a Database permission
+  * A target Resource element to set permission, to specify more than one use comma separation:
+  
+  
+  * **Leave empty** to specify only a Database permission
   * **"*"** to specify ALL TABLES within the database
   * **TableName** to specify a Table with all columns
   * **TableName(column1,column2,column3)** to include a Table with **included** list of columns, example: customer(col1,col2,col3)
@@ -44,7 +47,7 @@
 
 * **ResourcePermissions**
 
-  * A Supported Lake Formation permission, to specify more than one use comma separation.
+  * A Supported Lake Formation permission, to specify more than one use comma separation:
   * **S** SELECT
   * **I** INSERT
   * **U** UPDATE
