@@ -30,7 +30,7 @@
   * **ou:111122223333:o-abcdefghijkl/ou-ab00-cdefghij** for set an Organization ID
  
 * **Action**
-*   * A Grant or Revoke action
+  * A Grant or Revoke action
   * **Example:** "GRANT" or "REVOKE"
   
 * **ResourceElements**
