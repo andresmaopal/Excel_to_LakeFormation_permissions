@@ -7,10 +7,10 @@
 Excel template example
 
 
-| Alineado a la izquierda | Alineado en el centro | Alineado a la derecha |
 
-| ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions
-
+| ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions |
+| --- | --- | --- | --- | --- | --- |
+| ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions |
 
 
 
