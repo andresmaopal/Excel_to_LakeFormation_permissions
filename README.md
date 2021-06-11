@@ -21,7 +21,7 @@
   * Any Glue Catalog Database name or S3 Data Location path to set permissions
   * **Example:** "database_name" or "s3://bucket/table"
 * **TargetPrincipals**
-  * Any IAM Principal, User, Role, Organization or Organization Unit to set permissions, to specify more than one use comma separation.
+  * Any IAM Principal: User, Role, Organization or Organization Unit to set permissions, to specify more than one use comma separation.
 
   * **roleName** for set a role name
   * **u:UserName** for set a user name
@@ -38,8 +38,8 @@
   * **Leacy empty** to specify only a Database permission
   * **"*"** to specify ALL TABLES within the database
   * **TableName** to specify a Table with all columns
-  * **TableName(column1,column2,column3)** to include a Table with included list of columns
-  * **TableName(-column1,column2,column3)** to include a Table with excluded list of columns, the diference is the "-" symbol
+  * **TableName(column1,column2,column3)** to include a Table with included list of columns, example: customer(col1,col2,col3)
+  * **TableName(-column1,column2,column3)** to include a Table with excluded list of columns, the diference is the "-" symbol, example: customer(-email,address)
   * **TagKey:TagValue** to set a Tag with Key:Value
 
 * **ResourcePermissions**
