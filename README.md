@@ -18,7 +18,7 @@
 ### Supported syntax
 
 * *ResourceLocationDatabase*
-asadasd
+* asadasd
 
 * TargetPrincipals
 * Action
