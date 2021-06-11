@@ -34,7 +34,7 @@
   * **Example:** "GRANT" or "REVOKE"
   
 * **ResourceElements**
-*   * A target Resource element to set permission, to specify more than one use comma separation.
+  * A target Resource element to set permission, to specify more than one use comma separation.
   * **Leacy empty** to specify only a Database permission
   * **"*"** to specify ALL TABLES within the database
   * **TableName** to specify a Table with all columns
@@ -43,10 +43,10 @@
   * **TagKey:TagValue** to set a Tag with Key:Value
 
 * **ResourcePermissions**
-*   * Any Glue Catalog Database name or S3 Data Location path to set permissions
+  * Any Glue Catalog Database name or S3 Data Location path to set permissions
   * **Example:** "database_name" or "s3://bucket/table"
 * **ResourceGrantPermissions**
-*   * Any Glue Catalog Database name or S3 Data Location path to set permissions
+  * Any Glue Catalog Database name or S3 Data Location path to set permissions
   * **Example:** "database_name" or "s3://bucket/table"
 
 
