@@ -44,7 +44,7 @@
   * **TableName** to specify a Table with all columns
   * **TableName(column1,column2,column3)** to include a Table with **included** list of columns, example: customer(col1,col2,col3)
   * **TableName(-column1,column2,column3)** to include a Table with **excluded** list of columns, the diference is the "-" symbol, example: customer(-email,address)
-  * **TagKey:TagValue** to set a Tag with Key:Value
+  * **TagKey:TagValue** to set a Tag with Key:Value, example: Domain:Customer
 
 * **ResourcePermissions**
 
