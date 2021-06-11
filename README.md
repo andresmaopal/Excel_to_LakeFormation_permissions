@@ -33,7 +33,7 @@
  
 * **Action**
   * A Grant or Revoke action
-  * **Example:** "GRANT" or "REVOKE"
+  * **Values:** "GRANT" or "REVOKE"
   
 * **ResourceElements**
   * A target Resource element to set permission, to specify more than one use comma separation
