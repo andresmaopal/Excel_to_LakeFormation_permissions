@@ -81,7 +81,7 @@
 ### Installation:
 
 1. Clone the repo
-2. Create a AWS Lambda function with Python 3.8 and paste the code in *src/Lambda_Source*
+2. Create an AWS Lambda function with Python 3.8 and paste the code in *src/Lambda_Source*
 3. Create a Lambda Layer with the included Layer in *src/Lambda_Layer*
 4. Add the Layer to the previusly created Lambda function
 5. Attach to the Lambda role the policy: *AWSLakeFormationDataAdmin* 
