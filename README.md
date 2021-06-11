@@ -78,6 +78,17 @@
   * **DLA:** DATA_LOCATION_ACCESS
   * **AT:** ASSOCIATE_TAG
 
+### Installation:
+
+1. Clone the repo
+2. Create a AWS Lambda function with Python 3.8 and paste the code in *src/Lambda_Source*
+3. Create a Lambda Layer with the included Layer in *src/Lambda_Layer*
+4. Add the Layer to the previusly created Lambda function
+5. Attach to the Lambda role the policy: *AWSLakeFormationDataAdmin* 
+6. Attach a the Lambda role a s3:GetObject permission for the S3 Bucket where you want to upload the Excel files.
+7. Add the Lambda role as an Administrator in *Administrative roles and tasks* in AWS Lake Formation.
+8. Modify the Excel and upload it to the selectd S3 path.
+
 
 
 
