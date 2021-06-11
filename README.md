@@ -23,7 +23,7 @@
 
 * **TargetPrincipals**
   * Any IAM Principal: User, Role, Organization or Organization Unit to set permissions, to specify more than one use comma separation:
-
+  Values:
   * **roleName** for set a role name
   * **u:UserName** for set a user name
   * **a:AccountID** for set an Account ID
@@ -36,8 +36,7 @@
   
 * **ResourceElements**
   * A target Resource element to set permission, to specify more than one use comma separation:
-  
-  
+  Values:  
   * **Leave empty** to specify only a Database permission
   * **"*"** to specify ALL TABLES within the database
   * **TableName** to specify a Table with all columns
