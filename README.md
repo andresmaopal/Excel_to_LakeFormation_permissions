@@ -38,16 +38,38 @@
   * **Leacy empty** to specify only a Database permission
   * **"*"** to specify ALL TABLES within the database
   * **TableName** to specify a Table with all columns
-  * **TableName(column1,column2,column3)** to include a Table with included list of columns, example: customer(col1,col2,col3)
-  * **TableName(-column1,column2,column3)** to include a Table with excluded list of columns, the diference is the "-" symbol, example: customer(-email,address)
+  * **TableName(column1,column2,column3)** to include a Table with **included** list of columns, example: customer(col1,col2,col3)
+  * **TableName(-column1,column2,column3)** to include a Table with **excluded** list of columns, the diference is the "-" symbol, example: customer(-email,address)
   * **TagKey:TagValue** to set a Tag with Key:Value
 
 * **ResourcePermissions**
-  * Any Glue Catalog Database name or S3 Data Location path to set permissions
-  * **Example:** "database_name" or "s3://bucket/table"
+
+  * A Supported Lake Formation permission, to specify more than one use comma separation.
+  * **S** SELECT
+  * **I** INSERT
+  * **U** UPDATE
+  * **DR** DROP
+  * **DL** DELETE
+  * **DS** DESCRIBE
+  * **CT** CREATE TABLE
+  * **CD:** CREATE_DATABASE
+  * **DLA:** DATA_LOCATION_ACCESS
+  * **AT:** ASSOCIATE_TAG
+
 * **ResourceGrantPermissions**
-  * Any Glue Catalog Database name or S3 Data Location path to set permissions
-  * **Example:** "database_name" or "s3://bucket/table"
+
+  * A Supported Lake Formation Grantable permission, to specify more than one use comma separation.
+  * **S** SELECT
+  * **I** INSERT
+  * **U** UPDATE
+  * **DR** DROP
+  * **DL** DELETE
+  * **DS** DESCRIBE
+  * **CT** CREATE TABLE
+  * **CD:** CREATE_DATABASE
+  * **DLA:** DATA_LOCATION_ACCESS
+  * **AT:** ASSOCIATE_TAG
+
 
 
 
