@@ -22,8 +22,9 @@
   * **Example:** "database_name" or "s3://bucket/table"
 
 * **TargetPrincipals**
-  * Any IAM Principal: User, Role, Organization or Organization Unit to set permissions, to specify more than one use comma separation:
-  Values:
+  * Any IAM Principal: User, Role, Organization or Organization Unit to set permissions, to specify more than one use comma separation
+ 
+  * **Values**:
   * **roleName** for set a role name
   * **u:UserName** for set a user name
   * **a:AccountID** for set an Account ID
@@ -35,8 +36,9 @@
   * **Example:** "GRANT" or "REVOKE"
   
 * **ResourceElements**
-  * A target Resource element to set permission, to specify more than one use comma separation:
-  Values:  
+  * A target Resource element to set permission, to specify more than one use comma separation
+
+  * **Values**:
   * **Leave empty** to specify only a Database permission
   * **"*"** to specify ALL TABLES within the database
   * **TableName** to specify a Table with all columns
@@ -46,7 +48,9 @@
 
 * **ResourcePermissions**
 
-  * A Supported Lake Formation permission, to specify more than one use comma separation:
+  * A Supported Lake Formation permission, to specify more than one use comma separation
+  * 
+  * **Values**:
   * **S** SELECT
   * **I** INSERT
   * **U** UPDATE
@@ -61,6 +65,8 @@
 * **ResourceGrantPermissions**
 
   * A Supported Lake Formation Grantable permission, to specify more than one use comma separation.
+  * 
+  * **Values**:
   * **S** SELECT
   * **I** INSERT
   * **U** UPDATE
