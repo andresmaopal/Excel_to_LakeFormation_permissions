@@ -6,10 +6,10 @@
 
 Excel template example
 
-| Primer encabezado | Segundo encabezado |
-| ------------- | ------------- |
-| Contenido de la celda  | Contenido de la celda  |
-| Contenido de la celda  | Contenido de la celda  |
+| ResourceLocationDatabase| TargetPrincipals	| Action	 |ResourceElements	 | ResourcePermissions	| ResourceGrantPermissions
+| ------------- | ------------- || ------------- | ------------- || ------------- | ------------- |
+
+
 
 
 
