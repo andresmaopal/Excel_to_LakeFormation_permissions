@@ -9,8 +9,8 @@
 | ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions |
 | --- | --- | --- | --- | --- | --- |
 |database1	|role1,role2,role3	|GRANT|		|CT,A,DR| |	
-|database2	|role1, u:user1	|GRANT|	*	|S,I,U,DR|S,I,U,DR|
-|database1	|role1|	GRANT	|table1,table2,table3|	*	| |
+|database2	|role1, u:user1	| GRANT|	*	|S,I,U,DR|S,I,U,DR|
+|database1	|role1, u:user2 |	GRANT	|table1,table2,table3|	*	| |
 |database1	|role1,role2|	GRANT	|table1(col1,col2,col3,col4)|	S	| |
 |s3://lf-data-lake-bucket|spectrumrole, u:user2	|GRANT	| |	DLA	| |
 |database1	|role3, u:user2	|REVOKE|	*	|S,I,U,DR	|S,I,U,DR |
