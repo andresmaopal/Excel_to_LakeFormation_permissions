@@ -8,7 +8,7 @@
 
 | ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions |
 | --- | --- | --- | --- | --- | --- |
-|database1	|role1,role2	|GRANT|		|CT,A,DR| |	
+|database1	|role1,role2,role3	|GRANT|		|CT,A,DR| |	
 |database2	|role1, u:user1	|GRANT|	*	|S,I,U,DR|S,I,U,DR|
 |database1	|role1|	GRANT	|date_dim,time_dim,ship_mode|	*	| |
 |database1	|role2|	GRANT	|customer(c_first_name,c_last_name,c_email_address)|	S	| |
