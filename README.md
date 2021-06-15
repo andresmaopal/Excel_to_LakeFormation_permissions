@@ -92,6 +92,11 @@ Template provided on the /excel_template folder
 9. Modify the Excel and upload it to the selected S3 path.
 
 
+### Output:
+
+In case of any Failure(s) both on syntax or not allowed permission on Lake Formation, it will return a JSON with the list of failures.
+
+
 
 
 
