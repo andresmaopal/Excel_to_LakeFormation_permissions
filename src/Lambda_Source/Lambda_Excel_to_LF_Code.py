@@ -353,7 +353,7 @@ def apply_lake_formation_permissions(_Entries, Action):
             dict_response.append(result_dict['Failures'])
         
         response = [item for sublist in dict_response for item in sublist]
-        print("REVOKE EXECUTED! API RESPONSE BELOW:")
+        print("REVOKE EXECUTED! IN CASE OF FAILURES ON API SEE THE JSON BELOW:")
         print(json.dumps(response))
         
     elif Action == "GRANT":
@@ -366,7 +366,7 @@ def apply_lake_formation_permissions(_Entries, Action):
             dict_response.append(result_dict['Failures'])
         
         response = [item for sublist in dict_response for item in sublist]
-        print("GRANT EXECUTED! API RESPONSE BELOW:")
+        print("GRANT EXECUTED! IN CASE OF FAILURES ON API SEE THE JSON BELOW:")
         print(json.dumps(response))
 
     else:
@@ -383,5 +383,6 @@ def split_list(l, n):
     """Yield n number of striped chunks from l."""
     for i in range(0, n):
         yield l[i::n]
+
 
 
