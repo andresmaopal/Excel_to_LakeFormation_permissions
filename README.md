@@ -88,7 +88,7 @@
 6. Attach to the Lambda role the policy: *AWSLakeFormationDataAdmin* 
 7. Attach a the Lambda role a s3:GetObject permission for the S3 Bucket where you want to upload the Excel files.
 8. Add the Lambda role as an Administrator in *Administrative roles and tasks* in AWS Lake Formation.
-9. Modify the Excel and upload it to the selectd S3 path.
+9. Modify the Excel and upload it to the selected S3 path.
 
 
 
