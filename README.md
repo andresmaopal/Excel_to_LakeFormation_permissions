@@ -8,12 +8,12 @@
 
 | ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions |
 | --- | --- | --- | --- | --- | --- |
-|tpcds	|spectrumroletest	|GRANT|		|CT,A,DR| |	
-|tpcds	|spectrumroletest, u:lf-developer	|GRANT|	*	|S,I,U,DR|S,I,U,DR|
-|tpcds	|SpectrumRole|	GRANT	|date_dim,time_dim,ship_mode|	*	| |
-|tpcds	|SpectrumRole|	GRANT	|customer(-c_first_name,c_last_name,c_email_address)|	S	| |
-|s3://lf-data-lake-bucket|spectrumroletest, u:lf-developer	|GRANT	|	DLA	| |
-|tpcds	|spectrumroletest, u:lf-developer	|REVOKE|	*	|S,I,U,DR	|S,I,U,DR |
+|database1	|role1,role2,role3	|GRANT|		|CT,A,DR| |	
+|database2	|role1, u:user1	| GRANT|	*	|S,I,U,DR|S,I,U,DR|
+|database1	|role1, u:user2 |	GRANT	|table1,table2,table3|	*	| |
+|database1	|role1,role2|	GRANT	|table1(col1,col2,col3,col4)|	S	| |
+|s3://lf-data-lake-bucket|spectrumrole, u:user2	|GRANT	| |	DLA	| |
+|database1	|role1	|REVOKE|	*	|S,I,U,DR	|S,I,U,DR |
 
 ### Supported syntax
 
@@ -22,8 +22,9 @@
   * **Example:** "database_name" or "s3://bucket/table"
 
 * **TargetPrincipals**
-  * Any IAM Principal: User, Role, Organization or Organization Unit to set permissions, to specify more than one use comma separation:
-
+  * Any IAM Principal: User, Role, Organization or Organization Unit to set permissions, to specify more than one use comma separation
+ 
+  * **Values**:
   * **roleName** for set a role name
   * **u:UserName** for set a user name
   * **a:AccountID** for set an Account ID
@@ -32,22 +33,24 @@
  
 * **Action**
   * A Grant or Revoke action
-  * **Example:** "GRANT" or "REVOKE"
+  * **Values:** "GRANT" or "REVOKE"
   
 * **ResourceElements**
-  * A target Resource element to set permission, to specify more than one use comma separation:
-  
-  
+  * A target Resource element to set permission, to specify more than one use comma separation
+
+  * **Values**:
   * **Leave empty** to specify only a Database permission
   * **"*"** to specify ALL TABLES within the database
   * **TableName** to specify a Table with all columns
   * **TableName(column1,column2,column3)** to include a Table with **included** list of columns, example: customer(col1,col2,col3)
   * **TableName(-column1,column2,column3)** to include a Table with **excluded** list of columns, the diference is the "-" symbol, example: customer(-email,address)
-  * **TagKey:TagValue** to set a Tag with Key:Value
+  * **TagKey:TagValue** to set a Tag with Key:Value, example: Domain:Customer
 
 * **ResourcePermissions**
 
-  * A Supported Lake Formation permission, to specify more than one use comma separation:
+  * A Supported Lake Formation permission, to specify more than one use comma separation
+  * 
+  * **Values**:
   * **S** SELECT
   * **I** INSERT
   * **U** UPDATE
@@ -62,6 +65,8 @@
 * **ResourceGrantPermissions**
 
   * A Supported Lake Formation Grantable permission, to specify more than one use comma separation.
+  * 
+  * **Values**:
   * **S** SELECT
   * **I** INSERT
   * **U** UPDATE
@@ -72,6 +77,17 @@
   * **CD:** CREATE_DATABASE
   * **DLA:** DATA_LOCATION_ACCESS
   * **AT:** ASSOCIATE_TAG
+
+### Installation:
+
+1. Clone the repo
+2. Create an AWS Lambda function with Python 3.8 and paste the code in *src/Lambda_Source*
+3. Create a Lambda Layer with the included Layer in *src/Lambda_Layer*
+4. Add the Layer to the previusly created Lambda function
+5. Attach to the Lambda role the policy: *AWSLakeFormationDataAdmin* 
+6. Attach a the Lambda role a s3:GetObject permission for the S3 Bucket where you want to upload the Excel files.
+7. Add the Lambda role as an Administrator in *Administrative roles and tasks* in AWS Lake Formation.
+8. Modify the Excel and upload it to the selectd S3 path.
 
 
 
