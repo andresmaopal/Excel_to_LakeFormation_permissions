@@ -5,6 +5,7 @@
 ![alt text](https://i.ibb.co/xXgGv2Q/excel-to-lf-process.png")
 
 ### Excel template example
+Template provided on the /excel_template folder
 
 | ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions |
 | --- | --- | --- | --- | --- | --- |
@@ -83,11 +84,12 @@
 1. Clone the repo
 2. Create an AWS Lambda function with Python 3.8 and paste the code in *src/Lambda_Source*
 3. Create a Lambda Layer with the included Layer in *src/Lambda_Layer*
-4. Add the Layer to the previusly created Lambda function
-5. Attach to the Lambda role the policy: *AWSLakeFormationDataAdmin* 
-6. Attach a the Lambda role a s3:GetObject permission for the S3 Bucket where you want to upload the Excel files.
-7. Add the Lambda role as an Administrator in *Administrative roles and tasks* in AWS Lake Formation.
-8. Modify the Excel and upload it to the selectd S3 path.
+4. Add the Layer to the previously created Lambda function
+5. Add an S3 Put trigger on the Lambda console pointing to the source Excel S3 path
+6. Attach to the Lambda role the policy: *AWSLakeFormationDataAdmin* 
+7. Attach a the Lambda role a s3:GetObject permission for the S3 Bucket where you want to upload the Excel files.
+8. Add the Lambda role as an Administrator in *Administrative roles and tasks* in AWS Lake Formation.
+9. Modify the Excel and upload it to the selected S3 path.
 
 
 
