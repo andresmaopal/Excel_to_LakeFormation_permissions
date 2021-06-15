@@ -5,7 +5,7 @@
 ![alt text](https://i.ibb.co/xXgGv2Q/excel-to-lf-process.png")
 
 ### Excel template example
-Template provided on the /src folder
+Template provided on the /excel_template folder
 
 | ResourceLocationDatabase | TargetPrincipals | Action | ResourceElements | ResourcePermissions	| ResourceGrantPermissions |
 | --- | --- | --- | --- | --- | --- |
