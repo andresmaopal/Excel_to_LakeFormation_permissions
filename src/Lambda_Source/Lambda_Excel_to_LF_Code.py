@@ -1,4 +1,9 @@
-# PYTHON LIBRARIES - PYTHON 3.8
+'''
+Lambda Python 3.8 
+Excel to Lake Formation Bulk Permissions
+Use together with provided Lambda Layer and S3 Put trigger over the desired bucket
+
+'''
 import json
 import awswrangler as wr
 import pandas as pd
@@ -6,6 +11,8 @@ import boto3
 import uuid
 import sys
 import re
+import numpy
+import math
 import urllib.parse
 
 
@@ -324,23 +331,57 @@ def lambda_handler(event, context):
 
 def apply_lake_formation_permissions(_Entries, Action):
     lake_formation = boto3.session.Session().client('lakeformation')
+    
+    num_l_perm = len(_Entries)
+    num_chunks = math.ceil(num_l_perm/19) #19 is the Lake Formation Batch API Limit for number of entries.
+    print("num_chunks "+str(num_chunks))
+    print("Entry type " + str(type(_Entries)))
+    print(_Entries)
+    print("1...................")
+    l_entries = list(split_list(_Entries, num_chunks))
+    #l_entries = numpy.array_split(_Entries,num_chunks)
+    print(l_entries[0])
+    print("2...................")
+    dict_response = []
    
     if Action == "REVOKE":
-        #print("Revoking.. {}, {}, {}, {}".format(_Entries.get('_Principal'),_Entries.get('_Resource'),_Entries.get('_Permissions'),_Entries.get('_PermissionsWithGrantOption') ) )
-        response = lake_formation.batch_revoke_permissions(Entries=_Entries)
+ 
+        for entry in l_entries:
+            response = lake_formation.batch_revoke_permissions(Entries=entry)
+            result_dict = json.dumps(response)
+            result_dict = json.loads(result_dict)
+            dict_response.append(result_dict['Failures'])
+        
+        response = [item for sublist in dict_response for item in sublist]
         print("REVOKE EXECUTED! API RESPONSE BELOW:")
-        print(response)
+        print(json.dumps(response))
         
     elif Action == "GRANT":
-        #print("Grating.. {}, {}, {}, {}".format(_Entries.get('_Principal'),_Entries.get('_Resource'),_Entries.get('_Permissions'),_Entries.get('_PermissionsWithGrantOption') ) )
-        response = lake_formation.batch_grant_permissions(Entries=_Entries )
-           
-        print("GRANTED EXECUTED! API RESPONSE BELOW:")
-        print(response)
+        
+        #response = lake_formation.batch_grant_permissions(Entries=_Entries )
+        for entry in l_entries:
+            response = lake_formation.batch_grant_permissions(Entries=entry)
+            result_dict = json.dumps(response)
+            result_dict = json.loads(result_dict)
+            dict_response.append(result_dict['Failures'])
+        
+        response = [item for sublist in dict_response for item in sublist]
+        print("GRANT EXECUTED! API RESPONSE BELOW:")
+        print(json.dumps(response))
+
     else:
+        print("ERROR: Invalid argument in apply_lake_formation_permissions, must be GRANT or REVOKE ")
         pass
     
     return response
 
 def replace(g):
-    return g.group(0).replace(',', ';')    
+    return g.group(0).replace(',', ';')
+
+
+def split_list(l, n):
+    """Yield n number of striped chunks from l."""
+    for i in range(0, n):
+        yield l[i::n]
+
+
