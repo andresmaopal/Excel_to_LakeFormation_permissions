@@ -335,13 +335,8 @@ def apply_lake_formation_permissions(_Entries, Action):
     num_l_perm = len(_Entries)
     num_chunks = math.ceil(num_l_perm/19) #19 is the Lake Formation Batch API Limit for number of entries.
     print("num_chunks "+str(num_chunks))
-    print("Entry type " + str(type(_Entries)))
-    print(_Entries)
-    print("1...................")
     l_entries = list(split_list(_Entries, num_chunks))
-    #l_entries = numpy.array_split(_Entries,num_chunks)
-    print(l_entries[0])
-    print("2...................")
+
     dict_response = []
    
     if Action == "REVOKE":
